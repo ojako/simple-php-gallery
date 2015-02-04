@@ -1,0 +1,257 @@
+/*
+notes:
+06:10:14 removed bootstrap navbar (last rule)
+*/
+
+body {
+  height: 100%;
+}
+
+/* remove selection */
+html, body, h1, h2, h3, h4, h5, p{
+  font-family: 'Muli', sans-serif;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	cursor:default;
+}
+img a{
+  cursor: pointer;
+}
+button a::-moz-focus-inner {
+  border: 0;
+}
+/* icons */
+a.icon{
+  font-size: 1.15em;
+  padding: 0 0 0.1em 3em;
+  margin: 0.2em 0;
+  background-size: auto 100%;
+  display: block;
+  float: left;
+  clear: both;
+}
+.phone-icon {
+  background: url('../img/icon/phone.png') left no-repeat;
+}
+.email-icon {
+  background: url('../img/icon/email.png') left no-repeat;
+}
+.flickr-icon {
+  background: url('../img/icon/flickr.png') left no-repeat;
+}
+.compass-icon {
+  background: url('../img/icon/compass.png') left no-repeat; 
+}
+/* default theme navbar colours */
+.navbar-default {
+  background-color: #000;
+  border-color: #000;
+}
+/* default tile styles */
+.row > h1{
+  font-size: 1.2em;
+  font-variant: small-caps;
+  margin-left: 0.4em;  font-size: 1.2em;
+}
+/* slide styles */
+.front-page-slide{
+  padding: 100px 0 0 0;
+  min-height:100vh;
+  background: url(../img/header-background.jpg) no-repeat center center fixed #fff;
+  -webkit-touch-callout: none;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.front-page-slide h1{
+  background: white;
+  position: absolute;
+  bottom: 10px;
+  font-size: 2em;
+  padding: 5px;
+  opacity: 0.9;
+  margin-right: 15px;
+  text-transform: small-caps;
+  padding-right: 2em;
+  background: url('../img/icon/dbl-down.png') no-repeat #fff top right;
+  background-size: auto 100%;
+}
+
+@media screen and (max-width: 767px){
+  .front-page-slide h1{
+    padding: 0 1.5em 0 0;
+    font-size: 2em;
+  }
+}
+/* showcase slide */
+.showcase-slide h1{
+  font-size: 1.2em;
+  font-variant: small-caps;
+  margin-left: 0.4em;  font-size: 1.2em;
+}
+.showcase-slide p{
+  font-size: 1.1em;
+}
+/* band image slide */
+.band-image-slide{
+  min-height:85vh;
+  background: url(../img/band-background.jpg) no-repeat center center fixed #000;
+  -webkit-touch-callout: none;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* gallery slide */
+.gallery-slide h1{
+  font-size: 1.2em;
+  font-variant: small-caps;
+  margin-left: 0.4em;
+  white-space: nowrap;
+  overflow: hidden;
+}
+/* blur image slide */
+.blur-image-slide{
+  min-height:25vh;
+  background: url(../img/blur-image-tile.jpg) no-repeat center center fixed #000;
+  -webkit-touch-callout: none;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.slide-wrap{
+  width: 100%;
+}
+/* image wall styles */
+.g {
+  padding: 0.25em;
+  overflow: hidden;
+  opacity: 0.85;
+  transition: opacity 0.75s;
+}
+.g:hover{opacity:1;}
+.g ul, .g li{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.g li {
+  /*hide and reveal in sections as per mquery*/
+  float: left;
+  width: 50%;
+  padding: 0.25em;
+  transition: all 1s;
+  display: none;
+}
+.g img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.g li:nth-child(odd) {
+  clear: left;
+}
+@media screen and (min-width: 0em){
+  .g li:nth-child(-n+2) {
+      display: block;
+    }
+}
+@media screen and (min-width: 40em) {
+  .g li {
+      width: 33.3333333333333333%;
+    }
+    .g li:nth-child(3n+1) {
+      clear: left;
+    }
+    .g li:nth-child(odd) {
+    clear: none;
+  }
+    .g li:nth-child(-n+6) {
+      display: block;
+    } 
+}
+@media screen and (min-width: 55em) {
+  .g li {
+      width: 25%; 
+    }
+    .g li:nth-child(4n+1) {
+      clear: left;
+    }
+    .g li:nth-child(3n+1) {
+    clear: none;
+  }
+  .g li:nth-child(-n+30) {
+      display: block;
+  }
+}
+@media screen and (min-width: 72em) {
+  .g li {
+      width: 20%; 
+    }
+    .g li:nth-child(5n+1) {
+      clear: left;
+    }
+    .g li:nth-child(4n+1) {
+    clear: none;
+  }
+  .g li:nth-child(-n+25) {
+      display: block;
+  }
+}
+@media screen and (min-width: 90em) {
+  .g li {
+      width: 16.666666666%; 
+    }
+    .g li:nth-child(6n+1) {
+      clear: left;
+    }
+    .g li:nth-child(5n+1) {
+    clear: none;
+   }
+  .g li:nth-child(-n+36) {
+      display: block;
+  }
+}
+
+@font-face {
+	font-family: header;
+	src: url('../fonts/ResamitzBold.otf');
+}
+.container{ width: 100%; margin:0 auto; transition:all 1s;}
+
+@media screen and (min-width: 1400px) {
+  .container{
+    max-width: 1400px;
+  }
+}
+/* hide navbar for large screens */
+@media (max-width: 766px){
+  .intro h1{display: none;}
+  .navbar{
+  opacity: 0.95;
+  transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -webkit-transition: opacity 1s ease-in-out;
+  }
+}
+@media (min-width: 767px){
+  .intro h1{display: inline;}
+  .navbar{
+  display:inline;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -webkit-transition: opacity 1s ease-in-out;
+  }
+}
+
+/*REMOVED NAVBAR*/
+
+.navbar{
+  display: none;
+}
